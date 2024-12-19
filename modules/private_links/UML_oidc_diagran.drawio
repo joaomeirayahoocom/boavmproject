@@ -1,0 +1,260 @@
+<mxfile host="65bd71144e">
+    <diagram id="ohXW_DUJG0b5-E1xnQmf" name="Page-1">
+        <mxGraphModel dx="3221" dy="1566" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="185" parent="0"/>
+                <mxCell id="595" value="&lt;h1&gt;Heading&lt;/h1&gt;&lt;p&gt;Process to setup oidc authentication&amp;nbsp; in github and azure ad for code deployment and tfstate storage&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" parent="185" vertex="1">
+                    <mxGeometry x="-1199.16" y="-470" width="574" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="615" value="git hub" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="185" source="650" target="617" edge="1">
+                    <mxGeometry x="-1" y="26" relative="1" as="geometry">
+                        <mxPoint x="-1347.8600000000001" y="-262" as="targetPoint"/>
+                        <mxPoint x="14" y="-5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="668" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E6E6E6;strokeWidth=1;fontColor=#FFFFFF;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="185" source="693" target="701" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-862.7000000000003" y="-171.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="597" value="federated &lt;br&gt;credential" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;" parent="185" vertex="1">
+                    <mxGeometry x="-1065.0000000000002" y="-200" width="138.67" height="83.2" as="geometry"/>
+                </mxCell>
+                <mxCell id="610" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0.1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="185" source="756" target="609" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-821" y="111" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="613" value="output" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="610" vertex="1" connectable="0">
+                    <mxGeometry x="-0.088" y="3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="750" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#FFFFFF;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryX=0.025;entryY=0.544;entryDx=0;entryDy=0;entryPerimeter=0;" parent="185" source="604" target="731" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1106" y="-281"/>
+                            <mxPoint x="-1106" y="-278"/>
+                        </Array>
+                        <mxPoint x="-1018" y="-237" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="751" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#FFFFFF;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryX=0.012;entryY=0.501;entryDx=0;entryDy=0;entryPerimeter=0;" parent="185" source="604" target="597" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-1073" y="-187" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-1105" y="-281"/>
+                            <mxPoint x="-1105" y="-158"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="752" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#FFFFFF;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryX=0.006;entryY=0.488;entryDx=0;entryDy=0;entryPerimeter=0;" parent="185" source="604" target="733" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-1069.2758620689654" y="-59.75862068965512" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-1105" y="-281"/>
+                            <mxPoint x="-1105" y="-34"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="604" value="&amp;nbsp; snp develope&amp;nbsp;&amp;nbsp;" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/azure_stack/User_Subscriptions.svg;" parent="185" vertex="1">
+                    <mxGeometry x="-1219.0000000000002" y="-318.14" width="45.1" height="43.77" as="geometry"/>
+                </mxCell>
+                <mxCell id="757" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#FFFFFF;startArrow=none;startFill=0;endArrow=classic;endFill=1;dashed=1;entryX=1.002;entryY=0.57;entryDx=0;entryDy=0;entryPerimeter=0;" parent="185" source="609" target="784" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1184" y="188"/>
+                            <mxPoint x="-1184" y="-130"/>
+                        </Array>
+                        <mxPoint x="-1238" y="-119" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="758" value="manual&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="757" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2823" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-99" y="-103" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="609" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;client_id&lt;/li&gt;&lt;li&gt;subscription_id&lt;/li&gt;&lt;li&gt;tenant-id&lt;/li&gt;&lt;li&gt;resource group&lt;/li&gt;&lt;li&gt;storage account&lt;/li&gt;&lt;li&gt;&amp;nbsp;storage account container&lt;/li&gt;&lt;/ul&gt;" style="shape=manualInput;whiteSpace=wrap;html=1;align=left;" parent="185" vertex="1">
+                    <mxGeometry x="-742.5" y="117" width="149" height="168" as="geometry"/>
+                </mxCell>
+                <mxCell id="618" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="185" source="784" target="617" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="765" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#006EAF;startArrow=classic;startFill=1;endArrow=classic;endFill=1;dashPattern=12 12;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#1ba1e2;" parent="185" source="617" target="669" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-1521" y="-101" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="772" value="PULL / PUSH" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="765" vertex="1" connectable="0">
+                    <mxGeometry x="0.0654" y="-2" relative="1" as="geometry">
+                        <mxPoint x="-42" y="-33" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="767" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;dashed=1;dashPattern=12 12;strokeColor=#006EAF;startArrow=none;startFill=0;endArrow=classic;endFill=1;fillColor=#1ba1e2;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="185" source="617" target="713" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-714" y="-113" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-1133" y="-235"/>
+                            <mxPoint x="-1133" y="-224"/>
+                            <mxPoint x="-1040" y="-224"/>
+                            <mxPoint x="-1040" y="-220"/>
+                            <mxPoint x="-727" y="-220"/>
+                            <mxPoint x="-727" y="-207"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="617" value="&amp;nbsp;" style="whiteSpace=wrap;html=1;align=left;" parent="185" vertex="1">
+                    <mxGeometry x="-1391.43" y="-287.4" width="67.14" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="641" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E6E6E6;strokeWidth=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="185" source="784" target="643" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-1388.8600000000001" y="-32.5" as="sourcePoint"/>
+                        <mxPoint x="-1388.8600000000001" y="10.500000000000004" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-1358" y="-140"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="629" value="output&amp;nbsp;" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.555;entryDx=0;entryDy=0;entryPerimeter=0;" parent="185" source="628" target="781" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-603.6399999999999" y="-272.28999999999996" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="628" value="on local backend run-&amp;gt;&amp;nbsp; Iac_azlz_management / Azure-terraform-foundation" style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="185" vertex="1">
+                    <mxGeometry x="-880" y="-303.11999999999995" width="192" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="645" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E6E6E6;strokeWidth=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0;entryY=0.58;entryDx=0;entryDy=0;entryPerimeter=0;" parent="185" source="643" target="663" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-1251.98" y="-12.750000000000007" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="649" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E6E6E6;strokeWidth=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="185" source="643" target="648" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="643" value="git hub runner will request access from Azure ad" style="whiteSpace=wrap;html=1;" parent="185" vertex="1">
+                    <mxGeometry x="-1417.8600000000001" y="-45" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="648" value="&lt;br&gt;Code gets deployed to azure&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;" parent="185" vertex="1">
+                    <mxGeometry x="-1428.33" y="47.52" width="140.94" height="77" as="geometry"/>
+                </mxCell>
+                <mxCell id="651" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=none;startFill=0;endArrow=none;endFill=1;exitX=-0.022;exitY=0.804;exitDx=0;exitDy=0;exitPerimeter=0;" parent="185" source="604" target="650" edge="1">
+                    <mxGeometry x="-1" y="-47" relative="1" as="geometry">
+                        <mxPoint x="-1255" y="-183.5" as="targetPoint"/>
+                        <mxPoint x="-1181" y="-183.5" as="sourcePoint"/>
+                        <mxPoint x="2" y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="650" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.github_code;pointerEvents=1;" parent="185" vertex="1">
+                    <mxGeometry x="-1281.0000000000002" y="-302.53999999999996" width="24" height="19.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="662" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E6E6E6;strokeWidth=1;fontColor=#FFFFFF;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryPerimeter=0;" parent="185" source="659" target="669" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-1449.98" y="-21.000000000000007" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="659" value="&lt;font color=&quot;#ffffff&quot;&gt;Codes&lt;/font&gt;" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#067F68;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.mainframe_modernization_developer;" parent="185" vertex="1">
+                    <mxGeometry x="-1561.0000000000002" y="-33" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="663" value="Azure ad" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.azure_active_directory;" parent="185" vertex="1">
+                    <mxGeometry x="-1269.0000000000002" y="-37.099999999999994" width="38" height="37.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="670" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E6E6E6;strokeWidth=1;fontColor=#FFFFFF;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="185" source="669" target="643" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="669" value="Repository" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.git_repository;fontColor=#FFFFFF;" parent="185" vertex="1">
+                    <mxGeometry x="-1498.0000000000002" y="-36" width="45" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="677" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E6E6E6;strokeWidth=1;fontColor=#FFFFFF;startArrow=none;startFill=0;endArrow=classic;endFill=1;" parent="185" source="676" target="659" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-1637.2399999999998" y="-14.900000000000091" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="676" value="federated &lt;br&gt;developer" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/azure_stack/User_Subscriptions.svg;" parent="185" vertex="1">
+                    <mxGeometry x="-1629" y="-34.84" width="40.88" height="39.68" as="geometry"/>
+                </mxCell>
+                <mxCell id="695" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E6E6E6;strokeWidth=1;fontColor=#FFFFFF;startArrow=none;startFill=0;endArrow=none;endFill=1;exitX=0.998;exitY=0.494;exitDx=0;exitDy=0;exitPerimeter=0;" parent="185" source="597" target="693" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-835.7" y="-167.5775862068965" as="sourcePoint"/>
+                        <mxPoint x="-772.7" y="-163.75" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="693" value="Azure" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.cloud;fontColor=#FFFFFF;" parent="185" vertex="1">
+                    <mxGeometry x="-905.0000000000001" y="-165.15" width="17.67" height="13.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="696" value="Repository" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.git_repository;fontColor=#FFFFFF;" parent="185" vertex="1">
+                    <mxGeometry x="-1368.8600000000001" y="-280.5" width="22" height="19" as="geometry"/>
+                </mxCell>
+                <mxCell id="701" value="on local backend run -&amp;gt; iac_oidc_gh_config / Azure-terraform-azuread-github-oidc" style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="185" vertex="1">
+                    <mxGeometry x="-858" y="-180.15" width="170" height="43.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="702" value="output&amp;nbsp;" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="185" source="701" target="713" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-316.37" y="-157.35" as="targetPoint"/>
+                        <mxPoint x="-292.37" y="-99.35000000000001" as="sourcePoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="708" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E6E6E6;strokeWidth=1;fontColor=#FFFFFF;startArrow=none;startFill=0;endArrow=classic;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="185" source="710" target="628" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-870.37" y="-280.21999999999997" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="732" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1.021;entryY=0.49;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" parent="185" source="710" target="731" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-948.1889999999999" y="-281.98640000000006" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="710" value="Azure" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.cloud;fontColor=#FFFFFF;" parent="185" vertex="1">
+                    <mxGeometry x="-921" y="-288.86999999999995" width="17.67" height="13.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="713" value="&lt;ul&gt;&lt;li&gt;application registration&lt;/li&gt;&lt;li&gt;application federation&lt;/li&gt;&lt;li&gt;service principal&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;text-align: center;&quot;&gt;assign federated credential rbac roles to storage account and container&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="185" vertex="1">
+                    <mxGeometry x="-586" y="-207.3" width="245.19" height="97.8" as="geometry"/>
+                </mxCell>
+                <mxCell id="722" value="Azure" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.cloud;fontColor=#FFFFFF;" parent="185" vertex="1">
+                    <mxGeometry x="-908.5" y="-39.82" width="17.67" height="13.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="724" value="on storage account backend run -&amp;gt; Iac_azlz_management / Azure-terraform-management" style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="185" vertex="1">
+                    <mxGeometry x="-870.5" y="-58.52" width="217" height="43.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="725" value="output&amp;nbsp;" style="edgeStyle=orthogonalEdgeStyle;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="185" source="724" target="727" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-606.63" y="-64.16999999999999" as="targetPoint"/>
+                        <mxPoint x="-597.63" y="-43.16999999999999" as="sourcePoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="727" value="&lt;ul&gt;&lt;li&gt;Azure Entra ID security group&lt;/li&gt;&lt;li&gt;add federated credential to securtity group&amp;nbsp;&lt;/li&gt;&lt;li&gt;rbac role assignment to AD security group&lt;/li&gt;&lt;li&gt;entra id role assignment to AD security group&lt;/li&gt;&lt;li&gt;assign API application.ReadWrite.All&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="185" vertex="1">
+                    <mxGeometry x="-586" y="-91.86999999999999" width="291" height="110.21" as="geometry"/>
+                </mxCell>
+                <mxCell id="731" value="foundation" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;" parent="185" vertex="1">
+                    <mxGeometry x="-1067" y="-317.82" width="119" height="71.4" as="geometry"/>
+                </mxCell>
+                <mxCell id="735" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.05;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;endArrow=none;endFill=0;exitX=0.998;exitY=0.503;exitDx=0;exitDy=0;exitPerimeter=0;" parent="185" source="733" target="722" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-915.4985199999999" y="-52.841199999999866" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="733" value="&lt;br&gt;management &lt;br&gt;" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;" parent="185" vertex="1">
+                    <mxGeometry x="-1051" y="-70" width="123.08" height="73.85" as="geometry"/>
+                </mxCell>
+                <mxCell id="756" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;direction=north;" parent="185" vertex="1">
+                    <mxGeometry x="-1050" y="43" width="764" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="776" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#E6E6E6;strokeWidth=1;fontColor=#FFFFFF;startArrow=none;startFill=0;endArrow=classic;endFill=1;exitX=0.89;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="185" source="722" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-867.5" y="-33.35" as="targetPoint"/>
+                        <mxPoint x="-891.5" y="45.65" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="781" value="&lt;ul&gt;&lt;li&gt;resource group&lt;/li&gt;&lt;li&gt;storage account&amp;nbsp;&lt;/li&gt;&lt;li&gt;storage account container&amp;nbsp;&lt;/li&gt;&lt;li&gt;storage account private link&lt;/li&gt;&lt;li&gt;assign current snp dev rbac role to storage account container&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="185" vertex="1">
+                    <mxGeometry x="-588" y="-341" width="227" height="113.6" as="geometry"/>
+                </mxCell>
+                <mxCell id="784" value="&lt;ul&gt;&lt;li&gt;client _id&lt;/li&gt;&lt;li&gt;subs_id&lt;/li&gt;&lt;li&gt;&amp;nbsp;tennant_id&lt;/li&gt;&lt;li&gt;&amp;nbsp;resource group&lt;/li&gt;&lt;li&gt;storage account&lt;/li&gt;&lt;li&gt;storage account container&lt;/li&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="185" vertex="1">
+                    <mxGeometry x="-1451.86" y="-207" width="188" height="135" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
