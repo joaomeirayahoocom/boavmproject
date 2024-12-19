@@ -6,6 +6,7 @@ module "resource_groups" {
   resource_groups = var.resource_groups
 }
 
+
 # Creates Network Security Group (*resusable to existing resources)
 module "network_security_group" {
 
@@ -83,17 +84,6 @@ module "windows_app_vm1" {
 }
 
 
-
-/*
-module "windows_vm2" {
-
-  source = "./modules/storage_accounts"
-
-  storage_account_rg_name     = module.resource_groups.resource_group_name_sa 
-  storage_account_rg_location = module.resource_groups.resource_group_location_sa
-
-  depends_on = [module.resource_groups]
-}*/
 /*
 # Creates Storage Accounts Containers
 module "storage_accounts" {
@@ -150,5 +140,4 @@ module "role_assignment" {
   
   depends_on = [module.storage_account_container, module.storage_accounts]
 }
-
 */
