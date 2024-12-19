@@ -116,37 +116,6 @@ module "storage_account_container" {
   depends_on = [module.resource_groups, module.storage_accounts]
 }
 
-
-
-# Creates Virtual Network
-module "virtual_network" {
-
-  source = "./modules/virtual_network"
-
-  resource_group_name       = module.resource_groups.resource_group_name_vnet
-
-  resource_group_location   = module.resource_groups.resource_group_location_vnet
-   
-  network_security_group_id = module.network_security_group.network_security_group
-
-  depends_on = [module.resource_groups, module.network_security_group]
-}
-
-module "subnets" {
-
-  source = "./modules/subnets"
-
-  resource_group_name       = module.resource_groups.resource_group_name_vnet
-
-  resource_group_location   = module.resource_groups.resource_group_location_vnet
-
-  virtual_network_name      = module.virtual_network.azurerm_vnet_name
-   
-  network_security_group_id = module.network_security_group.network_security_group
-
-  depends_on = [module.resource_groups, module.network_security_group]
-}
-
 data "azurerm_client_config" "core" {
   provider = azurerm.core
 }
