@@ -1,7 +1,7 @@
 # Creates Resource Groups with tags
 module "resource_groups" {
 
-  source = "./modules/resource_groups" 
+  source = "./modules/azure/resource_groups" 
 
   resource_groups = var.resource_groups
 }
@@ -9,7 +9,7 @@ module "resource_groups" {
 # Creates Network Security Group (*resusable to existing resources)
 module "network_security_group" {
 
-  source = "./modules/network_security_group"
+  source = "./modules/azure/network_security_group"
 
   resource_group_name       = module.resource_groups.resource_group_name_nsg
   resource_group_location   = module.resource_groups.resource_group_location_nsg
@@ -20,7 +20,7 @@ module "network_security_group" {
 # Creates Virtual Network
 module "virtual_network" {
 
-  source = "./modules/virtual_network"
+  source = "./modules/azure/virtual_network"
 
   resource_group_name       = module.resource_groups.resource_group_name_vnet
 
@@ -33,7 +33,7 @@ module "virtual_network" {
 
 module "subnets" {
 
-  source = "./modules/subnets"
+  source = "./modules/azure/subnets"
 
   resource_group_name       = module.resource_groups.resource_group_name_vnet
 
@@ -47,7 +47,7 @@ module "subnets" {
 }
 
 module "web_nic"{
-  source = "./modules/web_nic"
+  source = "./modules/azure/web_nic"
 
   resource_group_location  = module.resource_groups.resource_group_location_web
   resource_group_name      = module.resource_groups.resource_group_name_web
@@ -56,7 +56,7 @@ module "web_nic"{
 
 module "windows_web_vm1" {
 
-  source = "./modules/web_vm1"
+  source = "./modules/azure/web_vm1"
 
   resource_group_name     = module.resource_groups.resource_group_name_web
   resource_group_location = module.resource_groups.resource_group_location_web
@@ -64,7 +64,7 @@ module "windows_web_vm1" {
 }
 
 module "app_nic"{
-  source = "./modules/app_nic"
+  source = "./modules/azure/app_nic"
 
   resource_group_location  = module.resource_groups.resource_group_location_app
   resource_group_name      = module.resource_groups.resource_group_name_app
@@ -74,7 +74,7 @@ module "app_nic"{
 
 module "windows_app_vm1" {
 
-  source = "./modules/app_vm1"
+  source = "./modules/azure/app_vm1"
 
   resource_group_name     = module.resource_groups.resource_group_name_app
   resource_group_location = module.resource_groups.resource_group_location_app
@@ -84,7 +84,7 @@ module "windows_app_vm1" {
 # Creates Storage Accounts Containers
 module "storage_accounts" {
 
-  source = "./modules/storage_accounts"
+  source = "./modules/azure/storage_accounts"
 
   storage_account_rg_name     = module.resource_groups.resource_group_name_sa 
   storage_account_rg_location = module.resource_groups.resource_group_location_sa

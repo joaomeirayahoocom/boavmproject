@@ -1,5 +1,4 @@
-# multiple resources' names ...
-# rg group name
+#Azure variables
 variable "resource_groups" {
 
   default = {
@@ -39,4 +38,44 @@ variable "resource_groups" {
 
 
 
+
+
+
+#aws variables
+variable "aws_region" {
+
+  type        = string
+  description = "AWS Region"
+  default     = "us-west-1"
+}
+
+variable "aws_provider" {
+
+  type        = string
+  default     = "default"
+}
+
+variable "vpc_block" {
+
+  type        = string
+  default     = "10.11.0.0/16"
+}
+
+variable "subnet_web" {
+
+  type        = string
+  default     = "10.11.1.0/24"
+}
+
+variable "subnet_app" {
+
+  type        = string
+  default     = "10.11.2.0/24"
+}
+
+variable "subnet_db" {
+
+  type        = string
+  default     = "10.11.3.0/24"
+}
 
