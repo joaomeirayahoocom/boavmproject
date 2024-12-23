@@ -22,7 +22,7 @@ resource "azurerm_windows_virtual_machine" "web_vm1" {
 }
 
 resource "random_password" "password" {
-  length      = 20
+  length      = 25
   min_lower   = 1
   min_upper   = 1
   min_numeric = 1

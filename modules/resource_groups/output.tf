@@ -49,13 +49,13 @@ output "resource_group_location_nsg" {
 
   value = azurerm_resource_group.rg["nsg"].location
 }
-/*
-output "resource_group_name_web_nic" {
 
-  value = azurerm_resource_group.rg["web_nic"].name
+output "resource_group_name_sa" {
+
+  value = azurerm_resource_group.rg["sa"].name
 }
 
-output "resource_group_location_web_nic" {
+output "resource_group_location_sa" {
 
-  value = azurerm_resource_group.rg["web_nic"].location
-}*/
+  value = azurerm_resource_group.rg["sa"].location
+}

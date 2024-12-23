@@ -28,7 +28,12 @@ variable "resource_groups" {
           name     = "nsg"
           location = "westus3"
           tags     = {env = "dev", proj = "nsg", dept = "IT"}
-      }    
+      },
+        "sa"={
+          name     = "sa"
+          location = "westus3"
+          tags     = {env = "dev", proj = "nsg", dept = "IT"}
+      }     
     }
 }
 

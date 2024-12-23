@@ -6,7 +6,6 @@ module "resource_groups" {
   resource_groups = var.resource_groups
 }
 
-
 # Creates Network Security Group (*resusable to existing resources)
 module "network_security_group" {
 
@@ -53,7 +52,6 @@ module "web_nic"{
   resource_group_location  = module.resource_groups.resource_group_location_web
   resource_group_name      = module.resource_groups.resource_group_name_web
   subnet_id                = module.subnets.vm_id
-
 }
 
 module "windows_web_vm1" {
@@ -83,8 +81,6 @@ module "windows_app_vm1" {
   network_interface_ids   = [module.app_nic.app_nic_id]
 }
 
-
-/*
 # Creates Storage Accounts Containers
 module "storage_accounts" {
 
@@ -96,6 +92,7 @@ module "storage_accounts" {
   depends_on = [module.resource_groups]
 }
 
+/*
 # Creates Storage Account Container
 module "storage_account_container" {
 
