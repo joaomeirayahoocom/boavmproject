@@ -1,5 +1,5 @@
 # Creates Resource Groups with tags
-/*
+
 module "resource_groups" {
 
   source = "./modules/azure/resource_groups" 
@@ -47,6 +47,24 @@ module "subnets" {
   depends_on = [module.resource_groups, module.network_security_group]
 }
 
+module "db_nic"{
+  source = "./modules/azure/db_nic"
+
+  resource_group_location  = module.resource_groups.resource_group_location_db
+  resource_group_name      = module.resource_groups.resource_group_name_db
+  subnet_id                = module.subnets.vm_id
+}
+
+module "windows_db_vm1" {
+
+  source = "./modules/azure/db_vm1"
+
+  resource_group_name     = module.resource_groups.resource_group_name_db
+  resource_group_location = module.resource_groups.resource_group_location_db
+  network_interface_ids   = [module.db_nic.db_nic_id]
+}
+
+/*
 module "web_nic"{
   source = "./modules/azure/web_nic"
 
@@ -92,8 +110,8 @@ module "storage_accounts" {
 
   depends_on = [module.resource_groups]
 }
-*/
-/*
+
+
 # Creates Storage Account Container
 module "storage_account_container" {
 
