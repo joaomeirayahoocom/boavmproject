@@ -12,6 +12,7 @@
 
 *.sh
 *.ps1
+*.pub
 
 #backend file
 /**/backend.tf

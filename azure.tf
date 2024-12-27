@@ -47,9 +47,10 @@ module "subnets" {
   depends_on = [module.resource_groups, module.network_security_group]
 }
 
+/*
 #databases
 module "db_nic"{
-  source = "./modules/azure/network_interfaces/databases/db_nic"
+  source = "./modules/azure/network_interfaces/databases/windows/db_nic"
 
   resource_group_location  = module.resource_groups.resource_group_location_db
   resource_group_name      = module.resource_groups.resource_group_name_db
@@ -80,26 +81,26 @@ module "windows_db_mysql_vm1" {
   resource_group_name     = module.resource_groups.resource_group_name_db
   resource_group_location = module.resource_groups.resource_group_location_db
   network_interface_ids   = [module.db_mysql_nic.db_mysql_nic_id]
-}
+}*/
 
 module "db_oracle_nic"{
   
-  source = "./modules/azure/network_interfaces/databases/linux/oracle/db_oracle_nic"
+  source = "./modules/azure/network_interfaces/databases/linux/oracle"
 
   resource_group_location  = module.resource_groups.resource_group_location_db
   resource_group_name      = module.resource_groups.resource_group_name_db
   subnet_id                = module.subnets.vm_id
 }
 
-/*
+
 module "linux_db_oracle_vm1" {
 
   source = "./modules/azure/virtual_machines/databases/linux/oracle"
 
   resource_group_name     = module.resource_groups.resource_group_name_db
   resource_group_location = module.resource_groups.resource_group_location_db
-  network_interface_ids   = [module.db_oracle_nic.db_oracle_nic]
-}*/
+  network_interface_ids   = [module.db_oracle_nic.db_oracle_nic_id]
+}
 
 /*
 module "web_nic"{

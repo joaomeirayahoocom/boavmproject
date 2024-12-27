@@ -1,5 +1,3 @@
-
-
 variable "nic_name" {
   default =  "oracle_nic"
 }
