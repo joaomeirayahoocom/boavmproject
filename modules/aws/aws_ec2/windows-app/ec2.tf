@@ -1,5 +1,5 @@
 resource "aws_instance" "windows-server" {
-  ami                         = "ami-02e9e93401dd72225"
+  ami                         = var.ami
   instance_type               = "t2_nano"
   subnet_id                   = var.subnet_id
   #vpc_security_group_ids      = [aws_security_group.aws-windows-sg.id]

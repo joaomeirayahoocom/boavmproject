@@ -1,9 +1,26 @@
 module "aws_vpc" {
 
-  source = "./modules/aws/aws_vpc" 
+  source    = "./modules/aws/aws_vpc" 
   vpc_block = var.vpc_block
 }
+module "aws_subnet" {
 
+  source = "./modules/aws/aws_subnet" 
+  vpc_id = module.aws_vpc.vpc_id
+  subnet_app = var.subnet_app
+  subnet_db = var.subnet_db
+  subnet_web = var.subnet_web
+}
+
+/*
+module "security_group" {
+
+  source     = "./modules/aws/security_group" 
+  vpc_id     = module.aws_vpc.vpc_id
+  cidr_block = module.aws_vpc.vpc_cidr_block
+}*/
+
+/*
 module "aws_subnet" {
 
   source = "./modules/aws/aws_subnet" 
@@ -16,9 +33,12 @@ module "aws_subnet" {
 module "ec2_web" {
 
     source = "./modules/aws/aws_ec2/windows_web" 
+    ami    = var.image-windows
+    instance_type = var.instance_type
     subnet_id = module.aws_subnet.aws_subnet_web
 }
 
+*/
 
 
 #Start instance creation

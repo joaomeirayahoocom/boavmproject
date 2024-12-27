@@ -12,10 +12,9 @@ terraform {
     }
     aws = {
       source  = "hashicorp/aws"
-      version = "3.72.0"
+      version = "~>4.24.0"
     }
   }
-   
        backend "local" {
   }
 }
@@ -30,7 +29,6 @@ provider "random" {}
 
 provider "aws" {
   region  = var.aws_region
-  shared_credentials_file = "C:\\Users\\joaomeira\\.aws\\credentials"
-  profile = "default"
+  shared_credentials_files = ["C:\\Users\\joaomeira\\.aws\\credentials"]
 }
 

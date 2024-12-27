@@ -1,4 +1,5 @@
 # Creates Resource Groups with tags
+/*
 module "resource_groups" {
 
   source = "./modules/azure/resource_groups" 
@@ -91,7 +92,7 @@ module "storage_accounts" {
 
   depends_on = [module.resource_groups]
 }
-
+*/
 /*
 # Creates Storage Account Container
 module "storage_account_container" {

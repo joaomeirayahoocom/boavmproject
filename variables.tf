@@ -79,3 +79,12 @@ variable "subnet_db" {
   default     = "10.11.3.0/24"
 }
 
+variable "image-windows" {
+  type        = string
+  default     = "ami-02e9e93401dd72225"
+}
+
+variable "instance_type" {
+  type        = string
+  default     = "t2_nano"
+}
