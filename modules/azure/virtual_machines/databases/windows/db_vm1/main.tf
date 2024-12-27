@@ -1,4 +1,3 @@
-# Creates NSG
 resource "azurerm_windows_virtual_machine" "db_vm1" {
   name                = var.web_vm_name
   resource_group_name = var.resource_group_name

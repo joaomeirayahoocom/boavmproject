@@ -47,8 +47,9 @@ module "subnets" {
   depends_on = [module.resource_groups, module.network_security_group]
 }
 
+#databases
 module "db_nic"{
-  source = "./modules/azure/db_nic"
+  source = "./modules/azure/network_interfaces/databases/db_nic"
 
   resource_group_location  = module.resource_groups.resource_group_location_db
   resource_group_name      = module.resource_groups.resource_group_name_db
@@ -57,11 +58,28 @@ module "db_nic"{
 
 module "windows_db_vm1" {
 
-  source = "./modules/azure/db_vm1"
+  source = "./modules/azure/virtual_machines/databases/windows/db_vm1"
 
   resource_group_name     = module.resource_groups.resource_group_name_db
   resource_group_location = module.resource_groups.resource_group_location_db
   network_interface_ids   = [module.db_nic.db_nic_id]
+}
+
+module "db_mysql_nic"{
+  source = "./modules/azure/network_interfaces/databases/db_mysql_nic"
+
+  resource_group_location  = module.resource_groups.resource_group_location_db
+  resource_group_name      = module.resource_groups.resource_group_name_db
+  subnet_id                = module.subnets.vm_id
+}
+
+module "windows_db_mysql_vm1" {
+
+  source = "./modules/azure/virtual_machines/databases/windows/db_mysql_vm1"
+
+  resource_group_name     = module.resource_groups.resource_group_name_db
+  resource_group_location = module.resource_groups.resource_group_location_db
+  network_interface_ids   = [module.db_mysql_nic.db_mysql_nic_id]
 }
 
 /*
