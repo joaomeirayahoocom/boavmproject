@@ -1,5 +1,5 @@
 # Creates Resource Groups with tags
-
+/*
 module "resource_groups" {
 
   source = "./modules/azure/resource_groups" 
@@ -46,6 +46,7 @@ module "subnets" {
 
   depends_on = [module.resource_groups, module.network_security_group]
 }
+*/
 
 /*
 #databases
@@ -82,7 +83,7 @@ module "windows_db_mysql_vm1" {
   resource_group_location = module.resource_groups.resource_group_location_db
   network_interface_ids   = [module.db_mysql_nic.db_mysql_nic_id]
 }*/
-
+/*
 module "db_oracle_nic"{
   
   source = "./modules/azure/network_interfaces/databases/linux/oracle"
@@ -100,7 +101,7 @@ module "linux_db_oracle_vm1" {
   resource_group_name     = module.resource_groups.resource_group_name_db
   resource_group_location = module.resource_groups.resource_group_location_db
   network_interface_ids   = [module.db_oracle_nic.db_oracle_nic_id]
-}
+}*/
 
 /*
 module "web_nic"{

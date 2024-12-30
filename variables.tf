@@ -88,3 +88,47 @@ variable "instance_type" {
   type        = string
   default     = "t2_nano"
 }
+
+
+#oracle_variables
+#vcn
+variable "vcn_display_name" {
+  description = "VCN Name"
+  default     = "simple-vcn"
+}
+
+variable "vcn_cidr_block" {
+  description = "VCN CIDR"
+  default     = "10.0.0.0/16"
+}
+
+#subnets
+variable "subnet_display_name" {
+  description = "Subnet Name"
+  default     = "simple-subnet"
+}
+
+variable "subnet_dns_label" {
+  description = "Subnet DNS Label"
+  default     = "simplesubnet"
+}
+
+variable "subnet_cidr_block" {
+  description = "Subnet CIDR"
+  default     = "10.0.0.0/24"
+}
+
+#compartment
+variable "compartment_ocid" {
+  description = ""
+  default = "ocid1.tenancy.oc1..aaaaaaaab2ljev5xrj45kya7qlx2rdwuw3ohal6puigrte4l6yz6zk7hunaa"
+}
+
+variable "region" {
+  description = ""
+  default = "us-sanjose-1"
+}
+
+variable "tenancy_ocid" {
+  default = "ocid1.tenancy.oc1..aaaaaaaab2ljev5xrj45kya7qlx2rdwuw3ohal6puigrte4l6yz6zk7hunaa"
+}

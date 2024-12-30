@@ -1,3 +1,4 @@
+/*
 module "aws_vpc" {
 
   source    = "./modules/aws/aws_vpc" 
@@ -11,7 +12,7 @@ module "aws_subnet" {
   subnet_db = var.subnet_db
   subnet_web = var.subnet_web
 }
-
+*/
 /*
 module "security_group" {
 

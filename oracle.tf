@@ -5,7 +5,17 @@
 
 resource "oci_core_vcn" "vcn"{
    
-   compartment_id = "ocid1.tenancy.oc1..aaaaaaaab2ljev5xrj45kya7qlx2rdwuw3ohal6puigrte4l6yz6zk7hunaa"
-   cidr_block     = "10.0.0.0/16"
-   display_name   = "test-vcn"
+   compartment_id = var.compartment_ocid
+   cidr_block     = var.vcn_cidr_block
+   display_name   = var.vcn_display_name
+}
+
+#simple subnet
+resource "oci_core_subnet" "simple_subnet" {
+ 
+  cidr_block                 = var.subnet_cidr_block
+  compartment_id             = var.compartment_ocid
+  vcn_id                     = oci_core_vcn.vcn.id
+  display_name               = var.subnet_display_name
+  dns_label                  = substr(var.subnet_dns_label, 0, 15)
 }
