@@ -212,7 +212,7 @@ variable "instance_flex_ocpus" {
 variable "instance_state" {
   type        = string
   description = "(Updatable) The target state for the instance. Could be set to RUNNING or STOPPED."
-  default     = "RUNNING"
+  default     = "STOPPED"
 
   validation {
     condition     = contains(["RUNNING", "STOPPED"], var.instance_state)
@@ -258,7 +258,7 @@ variable "source_type" {
 variable "ssh_public_keys" {
   description = "Public SSH keys to be included in the ~/.ssh/authorized_keys file for the default user on the instance. To provide multiple keys, see docs/instance_ssh_keys.adoc."
   type        = string
-  default     = "C:\\Users\\joaomeira\\.ssh\\authorized_keys\\joao.pub"
+  default     = "c:\\users\\joaomeira\\.ssh\\id_rsa\\joaokey.pub"
 }
 
 # networking parameters

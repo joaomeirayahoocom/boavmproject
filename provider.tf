@@ -10,14 +10,14 @@ terraform {
       source  = "hashicorp/random"
       version = "~>3.6.3"
     }
-    aws = {
+    /*aws = {
       source  = "hashicorp/aws"
       version = "~>4.24.0"
     }
     oci = {
       source  = "oracle/oci"
       version = "6.21.0"
-    }
+    }*/
   }
        backend "local" {
   }
@@ -32,6 +32,7 @@ provider "azurerm" {
   subscription_id = "7be51bf7-41bf-4959-8328-190bdd199051"
 }
 
+/*
 provider "oci" {
   config_file_profile = "DEFAULT"
 }
@@ -41,7 +42,7 @@ provider "aws" {
   region  = var.aws_region
   shared_credentials_files = ["C:\\Users\\joaomeira\\.aws\\credentials"]
 }
-
+*/
 provider "random" {}
 
 

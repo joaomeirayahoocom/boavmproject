@@ -3,6 +3,7 @@
  # source = "./modules/oracle/vcn"
 #}
 
+/*
 resource "oci_core_vcn" "vcn"{
    
    compartment_id = var.compartment_ocid
@@ -17,7 +18,7 @@ resource "oci_core_subnet" "test_subnet" {
     vcn_id = oci_core_vcn.vcn.id
 }
 
-/*
+
 
 resource "oci_core_instance" "ubuntu_instance" {
 
@@ -81,7 +82,7 @@ resource "oci_core_instance" "ubuntu_instance" {
 
     preserve_boot_volume = false
 }
-*/
+
 module "instance_nonflex" {
   # source = "git::https://github.com/oracle-terraform-modules/terraform-oci-compute-instance" ## use this to test directly from Github HEAD
   source = "oracle-terraform-modules/compute-instance/oci"
@@ -99,7 +100,7 @@ module "instance_nonflex" {
   source_type           = var.source_type
   #cloud_agent_plugins   = var.cloud_agent_plugins
   # operating system parameters
-  ssh_public_keys = file("c:\\users\\joaomeira\\.ssh\\id_rsa\\joaokey.pub")
+  ssh_public_keys = file(var.ssh_public_keys)
   # networking parameters
   public_ip            = var.public_ip # NONE, RESERVED or EPHEMERAL
   subnet_ocids         = [oci_core_subnet.test_subnet.id]
@@ -111,3 +112,4 @@ module "instance_nonflex" {
      
    
 }
+*/
