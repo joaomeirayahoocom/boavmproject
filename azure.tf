@@ -1,12 +1,12 @@
 # Creates Resource Groups with tags
-/*
+
 module "resource_groups" {
 
   source = "./modules/azure/resource_groups" 
 
   resource_groups = var.resource_groups
 }
-
+/*
 # Creates Network Security Group (*resusable to existing resources)
 module "network_security_group" {
 

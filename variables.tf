@@ -124,11 +124,5 @@ variable "compartment_ocid" {
   default = "ocid1.tenancy.oc1..aaaaaaaab2ljev5xrj45kya7qlx2rdwuw3ohal6puigrte4l6yz6zk7hunaa"
 }
 
-variable "region" {
-  description = ""
-  default = "us-sanjose-1"
-}
 
-variable "tenancy_ocid" {
-  default = "ocid1.tenancy.oc1..aaaaaaaab2ljev5xrj45kya7qlx2rdwuw3ohal6puigrte4l6yz6zk7hunaa"
-}
+
