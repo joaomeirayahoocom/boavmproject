@@ -31,7 +31,8 @@ jobs:
     
     - uses: aws-actions/configure-aws-credentials@v2
       with:
-        creds: ${{ secrets.AWS_CREDENTIALS }}
+        aws-access-key-id: AKIA5CBDRGJRE64Y3OXS
+        aws-secret-access-key: J0y1WhFF6Qu0t4sS2fJO3r8nTU7OJzIe3rSNgye
         aws-region: us-west-1
       
     - uses: azure/login@v2
