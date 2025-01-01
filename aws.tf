@@ -1,9 +1,10 @@
-/*
+
 module "aws_vpc" {
 
   source    = "./modules/aws/aws_vpc" 
   vpc_block = var.vpc_block
 }
+/*
 module "aws_subnet" {
 
   source = "./modules/aws/aws_subnet" 

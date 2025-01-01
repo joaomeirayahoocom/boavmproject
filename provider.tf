@@ -10,10 +10,11 @@ terraform {
       source  = "hashicorp/random"
       version = "~>3.6.3"
     }
-    /*aws = {
+    aws = {
       source  = "hashicorp/aws"
       version = "~>4.24.0"
     }
+    /*
     oci = {
       source  = "oracle/oci"
       version = "6.21.0"
@@ -33,9 +34,9 @@ provider "azurerm" {
 }
 
 
-provider "oci" {
-  config_file_profile = "DEFAULT"
-}
+#provider "oci" {
+ # config_file_profile = "DEFAULT"
+#}
 
 provider "aws" {
 
