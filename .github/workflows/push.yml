@@ -53,7 +53,7 @@ jobs:
       id: plan
       run: terraform plan
 
-   # - name: Terraform apply
+    - name: Terraform apply
 
-  #  id: apply
-  #  run: terraform apply #-auto-approve
+      id: apply
+      run: terraform apply -auto-approve
