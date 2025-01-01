@@ -1,5 +1,5 @@
 # sa output file
-output "resource_group_name_app" {
+/*output "resource_group_name_app" {
 
   value = azurerm_resource_group.rg["app"].name
 }
@@ -49,7 +49,7 @@ output "resource_group_location_nsg" {
 
   value = azurerm_resource_group.rg["nsg"].location
 }
-
+*/
 output "resource_group_name_sa" {
 
   value = azurerm_resource_group.rg["sa"].name
