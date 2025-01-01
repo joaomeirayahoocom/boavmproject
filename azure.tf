@@ -1,5 +1,5 @@
 # Creates Resource Groups with tags
-/*
+
 module "resource_groups" {
 
   source = "./modules/azure/resource_groups" 
@@ -7,6 +7,7 @@ module "resource_groups" {
   resource_groups = var.resource_groups
 }
 
+/*
 # Creates Network Security Group (*resusable to existing resources)
 module "network_security_group" {
 
@@ -46,9 +47,9 @@ module "subnets" {
 
   depends_on = [module.resource_groups, module.network_security_group]
 }
-*/
 
-/*
+
+
 #databases
 module "db_nic"{
   source = "./modules/azure/network_interfaces/databases/windows/db_nic"
