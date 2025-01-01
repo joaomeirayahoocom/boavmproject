@@ -28,7 +28,13 @@ jobs:
     # Install the latest version of Terraform CLI kkk
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
-
+    
+    - uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-west-1
+      
     - uses: azure/login@v2
       with:
         auth-type: SERVICE_PRINCIPAL
