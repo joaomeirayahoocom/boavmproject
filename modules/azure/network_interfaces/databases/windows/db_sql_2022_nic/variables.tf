@@ -1,7 +1,7 @@
 
 
 variable "nic_name" {
-  default =  "db_nic"
+  default =  "db_sql_nic"
 }
 
 variable "resource_group_name" {

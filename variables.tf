@@ -3,7 +3,6 @@ variable "resource_groups" {
 
   default = {
     
-    /*
       "app"={
           name     = "app"
           location = "westus"
@@ -28,12 +27,7 @@ variable "resource_groups" {
           name     = "nsg"
           location = "westus"
           tags     = {env = "dev", proj = "nsg", dept = "IT"}
-      },*/
-        "sa"={
-          name     = "sa"
-          location = "westus"
-          tags     = {env = "dev", proj = "nsg", dept = "IT"}
-      }     
+      }   
     }
 }
 

@@ -20,7 +20,12 @@ terraform {
       version = "6.21.0"
     }*/
   }
-       backend "local" {
+       backend "azurerm" {
+
+        resource_group_name  = "tfstate_tcss_torage"
+        storage_account_name = "tcsprojecttfste"
+        container_name       = "tfstatecontainer"
+        key                  = "tfstatetcsblobkey"
   }
 }
 
@@ -30,7 +35,7 @@ provider "azurerm" {
       prevent_deletion_if_contains_resources = false
     }
   }
-  subscription_id = "7be51bf7-41bf-4959-8328-190bdd199051"
+      subscription_id = "7be51bf7-41bf-4959-8328-190bdd199051"
 }
 
 
@@ -40,8 +45,8 @@ provider "azurerm" {
 
 provider "aws" {
 
-  #region  = var.aws_region
-  #shared_credentials_files = ["C:\\Users\\joaomeira\\.aws\\credentials"]
+  region  = var.aws_region
+  shared_credentials_files = ["C:\\Users\\joaomeira\\.aws\\credentials"]
 }
 
 provider "random" {}

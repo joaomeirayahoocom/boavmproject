@@ -1,5 +1,4 @@
 # Creates Resource Groups with tags
-
 module "resource_groups" {
 
   source = "./modules/azure/resource_groups" 
@@ -7,8 +6,7 @@ module "resource_groups" {
   resource_groups = var.resource_groups
 }
 
-/*
-# Creates Network Security Group (*resusable to existing resources)
+# Creates Network Security Group
 module "network_security_group" {
 
   source = "./modules/azure/network_security_group"
@@ -48,26 +46,26 @@ module "subnets" {
   depends_on = [module.resource_groups, module.network_security_group]
 }
 
-
-
-#databases
-module "db_nic"{
-  source = "./modules/azure/network_interfaces/databases/windows/db_nic"
+#databases sql nic and sql 2022 windows vm
+module "db_slq-2022_nic"{
+  source = "./modules/azure/network_interfaces/databases/windows/db_sql_2022_nic"
 
   resource_group_location  = module.resource_groups.resource_group_location_db
   resource_group_name      = module.resource_groups.resource_group_name_db
   subnet_id                = module.subnets.vm_id
 }
 
-module "windows_db_vm1" {
+module "db_sql_2022_vm1" {
 
-  source = "./modules/azure/virtual_machines/databases/windows/db_vm1"
+  source = "./modules/azure/virtual_machines/databases/windows/db_sql_2022_vm1"
 
   resource_group_name     = module.resource_groups.resource_group_name_db
   resource_group_location = module.resource_groups.resource_group_location_db
-  network_interface_ids   = [module.db_nic.db_nic_id]
+  network_interface_ids   = [module.db_slq-2022_nic.db_sql_2022_nic]
 }
 
+/*
+#databases mysql nic and mysql 2022 windows vm
 module "db_mysql_nic"{
   source = "./modules/azure/network_interfaces/databases/windows/db_mysql_nic"
 
@@ -84,6 +82,9 @@ module "windows_db_mysql_vm1" {
   resource_group_location = module.resource_groups.resource_group_location_db
   network_interface_ids   = [module.db_mysql_nic.db_mysql_nic_id]
 }*/
+
+
+
 /*
 module "db_oracle_nic"{
   
