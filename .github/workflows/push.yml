@@ -45,7 +45,7 @@ jobs:
       run: |
         az account show 
 
-    # Run Terraform init
+    # Run Terraform initv
     - name: Terraform init
       
       id: init
