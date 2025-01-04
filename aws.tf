@@ -1,10 +1,10 @@
-
+/*
 module "aws_vpc" {
 
   source    = "./modules/aws/aws_vpc" 
   vpc_block = var.vpc_block
 }
-/*
+
 module "aws_subnet" {
 
   source = "./modules/aws/aws_subnet" 
@@ -13,14 +13,13 @@ module "aws_subnet" {
   subnet_db = var.subnet_db
   subnet_web = var.subnet_web
 }
-*/
-/*
+
 module "security_group" {
 
   source     = "./modules/aws/security_group" 
   vpc_id     = module.aws_vpc.vpc_id
   cidr_block = module.aws_vpc.vpc_cidr_block
-}*/
+*/
 
 /*
 module "aws_subnet" {

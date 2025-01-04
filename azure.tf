@@ -5,7 +5,7 @@ module "resource_groups" {
 
   resource_groups = var.resource_groups
 }
-
+/*
 # Creates Network Security Group
 module "network_security_group" {
 
@@ -63,7 +63,7 @@ module "db_sql_2022_vm1" {
   resource_group_location = module.resource_groups.resource_group_location_db
   network_interface_ids   = [module.db_slq-2022_nic.db_sql_2022_nic]
 }
-
+*/
 /*
 #databases mysql nic and mysql 2022 windows vm
 module "db_mysql_nic"{
