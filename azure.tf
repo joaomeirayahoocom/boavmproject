@@ -1,4 +1,4 @@
-# Creates Resource Groups with tagsccccddd
+# Creates Resource Groups with tags
 module "resource_groups" {
 
   source = "./modules/azure/resource_groups" 
