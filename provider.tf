@@ -1,19 +1,19 @@
 terraform {
-   required_version = ">=1.0"
+   required_version = ">=1.5.5"
 
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~>3.0"
+      version = ">= 3.74.0"
     }
     random = {
       source  = "hashicorp/random"
       version = "~>3.6.3"
     }
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~>4.24.0"
-    }
+   #aws = {
+     # source  = "hashicorp/aws"
+     # version = "~>4.24.0"
+   # }
     /*
     oci = {
       source  = "oracle/oci"
@@ -43,11 +43,11 @@ provider "azurerm" {
  # config_file_profile = "DEFAULT"
 #}
 
-provider "aws" {
+#provider "aws" {
 
-  region  = var.aws_region
-  shared_credentials_files = ["C:\\Users\\joaomeira\\.aws\\credentials"]
-}
+ # region  = var.aws_region
+ # shared_credentials_files = ["C:\\Users\\joaomeira\\.aws\\credentials"]
+#}
 
 provider "random" {}
 

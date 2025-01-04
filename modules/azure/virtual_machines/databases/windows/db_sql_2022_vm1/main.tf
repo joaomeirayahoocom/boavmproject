@@ -59,12 +59,12 @@ data "azurerm_storage_account" "tcs" {
   
 }
 # Create Log Analytics Workspace
-/*
+
 resource "azurerm_log_analytics_workspace" "my_log_analytics_workspace" {
 
   name                = "my-log-analytics-workspace"
 
-  resource_group_name = "my-resource-group"
+  resource_group_name = var.resource_group_name
 
   location            = "westus"
 
@@ -73,29 +73,28 @@ resource "azurerm_log_analytics_workspace" "my_log_analytics_workspace" {
 
 
 # Create Data Collection Rule
-
+/*
 resource "azurerm_monitor_data_collection_rule" "vm_insights_dcr" {
   name                = "vm-insights-dcr"
-  resource_group_name = "my-resource-group"
-  location            = "westus2"
+  resource_group_name = var.resource_group_name
+  location            = var.resource_group_location
 
   data_flow {
 
-    streams = ["Microsoft-InsightsMetrics"]
-    destinations = ["log-analytics-workspace-destination"]
+    streams = ["Microsoft-Perf", "Microsoft-InsightsMetrics"]
+    destinations = [azurerm_log_analytics_workspace.my_log_analytics_workspace]
   }
 
-  data_sources {
+  performance_counter {
 
-    performance_counter {
-
-      counter_specifiers = ["\\Processor\\% Processor Time", "\\Memory\\Available Bytes"]
-      sampling_frequency_in_seconds = 60
-    }
+    streams  = ["Microsoft-Perf", "Microsoft-InsightsMetrics"]
+    counter_specifiers = ["\\Processor\\% Processor Time", "\\Memory\\Available Bytes"]
+    sampling_frequency_in_seconds = 60
+    name = "example-datasource-perfcounter"
   }
-}
+  
+}*/
 
-*/
 
 
 
