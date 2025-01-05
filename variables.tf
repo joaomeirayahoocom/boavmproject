@@ -1,4 +1,4 @@
-#Azure variables
+#Azure variabless
 variable "resource_groups" {
 
   default = {
